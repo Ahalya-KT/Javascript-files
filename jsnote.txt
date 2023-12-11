@@ -1,0 +1,183 @@
+        -----java script------
+
+single threaded synchronus programming language
+
+        1-to display content console.log("")
+                (terminal-node filename)
+
+        2-datatype(type of data)
+                >> number
+                >> string
+                >>boolean
+
+        >>cons/let /var (doesn't specify the type of data)
+
+                 var--global scope
+                 var num
+
+                 const--
+                 const num=10
+
+                 let-- to execute block of statement
+
+
+
+        3-variable (to store values)
+          syntax--  variable name= values
+                    a=10
+
+
+        4-- operators
+            arithmetic operators
+            addition operator
+            subtraction
+            multiplication
+            division
+            modulus
+            power operator
+
+        2-relational operator
+            --less than <
+            --less than equal to<=
+            --greater than >=
+            --greater than equal to
+             --equal to
+             --not equal to
+
+        3-logical operator
+            AND(&&)    OR(||)   NOT(!)
+            0=f 1=t 
+
+            f*f=f      f+f=f  f!=t
+            0*0=0     0+0=0   0!=1
+
+
+            1*0=0     1+0=1   1!=0
+            t*f=f     t+f=t   t!=f
+
+            0*1=0     0+1=1
+            f*t=f     f+t=t
+
+            t*t=t     t+t=1 
+            1*1=1     1+1=1
+
+
+        4-increment decrement
+
+           short hand operator     
+
+        5-conditional operator
+                condition?true statement:false statement
+
+
+        6-decision making statement
+         >> if statement
+                syntax-   if(condition){
+                              true block statement execute
+                          }
+                          else{
+                             false block statement execute
+                          }
+
+        7-looping statement
+                1-for loop
+                syntax-    for(initialization;condition;increment/decrement)
+                    {
+                        body of the loop
+                    }
+
+             >>break statement
+                break  from a loop
+             >>continue statement 
+                condition neglects and continue      
+
+                2- while loop
+                  while(condition){
+                        body of while loop
+                 }
+
+
+        5-function
+              function definition 
+              function call
+
+             1- function definition
+                 syntax-   function function-name(arg1,arg2......arg4){
+                                 function body(define the task to be performed)
+                             }
+
+             2-function call
+             syntax-       function name(p1,p2,p3.......pn)    
+
+
+        6-InBuild function
+
+
+to identify array we use [] bracket
+
+
+array methods
+1.push()
+2-pop()
+3-map() apply a mapping
+
+
+
+string methods
+
+substring ----> remove a particular value from a string
+slice--> remove items from last
+eg:-calculator
+trim----> to avoid space
+
+
+
+
+
+4-object 
+  object is a datatype
+  data stored as key value pair
+  to identify object we use {}
+  to store more meaning full data
+
+
+  5-object oriented programming[OOP]
+
+  what is the difference b/w normal function and class function
+  ans-in normal function we use keyword (function) bt in class function no keyword is used
+  ()used in function bcz used inside class
+
+
+-----------API------------
+-------crud operation-----------
+  C ---create---post
+  R---read---get
+  U---update---put
+  D---delete---delete
+
+  200  series status api data correct ayitt kiti
+  400 seies anel nmmle bagath ninn ulla miskate
+  500 series anel server bagath ninn ulle miskate
+   300 series redirection error
+
+  create a connection
+  js use only one api bt angular use many api call at a time
+
+
+  ------how to call a api using js------
+  1-ajax [asynchronus javascript and xml]call ---old version ---XMLHTTP request class/method
+  2-promise
+
+  ---2 type function call----
+  1-synchronus function call
+  eg:-declay illathe work cheyyum  bt direct entry to call stack eg -console.log
+    
+  2-asynchronus function call
+  eg:-time declay ulle function bt no direct entry to the call stack
+  eg-call back function and api function[queue data structure model]
+  synchoronus full free ayal mathre asynchronus call stackll enter cheyum
+  ----> synchrous solve cheyythal mathre work cheyyum--
+  ---> event loop watch cheyythitt call stack free anel appo asynchronus function call can enter
+    ----> api work based on priorty queue
+
+  call stackill vanna mathre function work 

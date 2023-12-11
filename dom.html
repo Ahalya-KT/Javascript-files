@@ -1,0 +1,48 @@
+<!-- // Dom- Document object model 
+//to access html element to javascript
+//how we can access html elements in js  : generally called as dom methods -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome to all</h1>
+    <h2>Dom methods</h2>
+    <ol>
+        <li>using tag name: document.getElementsByTagName('tagname')</li>
+        <li>using id :document.getElementsById('id')</li>
+        <li>using className:document.getElementsByClassName</li>
+        <li>query Selector:document.QuerySelector('#id/.class/tagName')</li>
+    </ol>
+    
+    <p>Access and update content inside html elements</p>
+    <ol>
+        <li>innerHTML:get/set the content of an html element</li>
+        <li>text-content:get or set content of an html element</li>
+    </ol>
+
+    <!-- events in js -->
+    <p>events in js : action performed by user to trigger update in dom</p>
+    <ol>
+        <li>click</li>
+        <li>keydown</li>
+        <li>keyup</li>
+        <li>submit</li>
+        <li>load</li>
+        <li>resize</li>
+        <li>scroll</li>
+    </ol>
+    <button onclick="submit()">submit</button>
+</body>
+
+<script>
+    function submit()
+    {
+        alert('form submitted')
+    }
+</script>
+</html>

@@ -1,0 +1,83 @@
+<!-- Api call using ajax -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container m-5">
+        <h1 class="text-center text-primary">TODO List</h1>
+        <table class="table border p-5">
+            <!-- table heading -->
+            <thead>
+                <th>user id</th>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Complete</th>
+            </thead>
+                <tbody id="output">
+                    
+                </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    //Ajax---api call to get all toDos using XMLHttpRequest
+
+    //1-create an object for  XMLHttpRequest
+    let req=new XMLHttpRequest()
+
+    //2-using XMLHttpRequest object open a connection with api
+    req.open('get','https://jsonplaceholder.typicode.com/todos')
+
+    //send request
+    req.send()
+
+    // console.log('initial state',req.readyState);
+    // readyState should be 4 then only will get data .above code is used to check readyState initially it will 1
+
+    req.onreadystatechange=()=>{
+        console.log(req.readyState);
+
+        if(req.readyState==4){
+            if(req.status>=200&&req.status<300){
+                console.log(req.responseText);
+
+                displayData(JSON.parse(req.responseText))
+            }
+            else{
+                console.log('cannot fetch data');
+            }
+        }
+        else{
+            console.log('cannot fetch data');
+        }
+    }
+
+    function displayData(todos){
+        htmldata=``
+
+        for(let item of todos){
+            htmldata=`
+            <tr>
+                <td>${item.userId}</td>
+                <td>${item.id}</td>
+                <td>${item.title}</td>
+                <td>${item.completed}</td>
+            </tr>
+            
+            `
+            // display content in table body
+            output.innerHTML+=htmldata
+
+        }
+    }
+
+</script>
+</html>
+</html>
